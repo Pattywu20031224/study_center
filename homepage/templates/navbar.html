@@ -1,0 +1,27 @@
+<script>
+    $(() => {
+        $(document).ready(() => {
+            $('.sidenav').sidenav();
+        });
+    });
+</script>
+
+<nav>
+    <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">大直高中K中劃位系統</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/">首頁</a></li>
+            <li><a href="#!">學生劃位</a></li>
+            <li><a href="#!">學生簽到</a></li>
+            <li><a href="#!">老師點名</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="/">首頁</a></li>
+    <li><a href="#!">學生劃位</a></li>
+    <li><a href="#!">學生簽到</a></li>
+    <li><a href="#!">老師點名</a></li>
+</ul>
