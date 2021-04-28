@@ -58,7 +58,7 @@ ROOT_URLCONF = 'study_center.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hant'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Taipei'
 
 USE_I18N = True
 
@@ -121,4 +121,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+import os
+
+STATIC_URL = '/static/'                                 # 靜態檔案存取路徑
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]   # 靜態檔案實體儲存資料夾
+
+MEDIA_URL = '/media/'                           # 上傳檔案存取路徑
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 上傳檔案儲存資料夾
+
+LOGIN_URL = '/user/login/'  # 登入頁面路徑
+LOGIN_REDIRECT_URL = '/'    # 使用者登人後導向至首頁
