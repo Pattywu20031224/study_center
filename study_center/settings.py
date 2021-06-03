@@ -58,7 +58,7 @@ ROOT_URLCONF = 'study_center.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates'],      # 將頁面範本集中處理
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
