@@ -4,3 +4,4 @@ from django.views.generic import *
 
 class Student(TemplateView):
     template_name= "Student/student.html"
+    
