@@ -4,3 +4,9 @@ from django.views.generic import *
 
 class Teacher(TemplateView):
     template_name= "Teacher/teacher.html"
+
+class TeacherView(TemplateView):
+    template_name="Teacher/teacher_view.html"
+
+class TeacherRollCall(TemplateView):
+    template_name="Teacher/teacher_RollCall.html"
