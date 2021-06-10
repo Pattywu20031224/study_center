@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>
-    Hi, this is homepage.
-</p>
-
+{% if user.is_authenticated %}
+<p>Welcome, {{ user.get_username }}.</p>
+<div class="mb-1">
+    <a href="{% url 'student_info' %}" class="btn btn-sm btn-primary">
+      <i class="fas fa-plus"></i> 修改個人資料
+    </a>
+  </div>
+{% endif %}
 {% endblock %}

@@ -2,7 +2,19 @@
 
 {% block content %}
 <p>
-    Hi, this is student.html.
+    請更新個人資料
 </p>
+<form>
+    <label for="name">姓名:</label>
+    <input type="text"  name="name"><br>
+    <label for="classroom">班級:</label>
+    <input type="number" name="classroom"><br>
+    <label for="number">座號:</label>
+    <input type="number" name="number"><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+
 
 {% endblock %}
